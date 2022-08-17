@@ -9,6 +9,7 @@ namespace CoffeeMachineSimpler
         public string[] SyrupsInStock = { "Strawberry", "Caramel" };
         public string Currency = "Euro";
         public int Balance = 0;
+        public string[] CoffeeTypes = { "Capuchino", "ChocolateCoffee" };
 
         public string MakeCupCoffee(ICoffee coffeeType, IClient client)
         {
@@ -56,12 +57,22 @@ namespace CoffeeMachineSimpler
 
         public string ReturnBalance(IClient client)
         {
-            if (this.Balance <= 0) return "Your balace is too low";
+            if (this.Balance <= 0) return "Your balance is too low";
             else
             { 
                 client.Money += this.Balance;
                 return "Catch your cash";
             }
+        }
+
+        public string GetCoffeeInStock()
+        {
+            string coffeTypes = "We have: ";
+            foreach (string coffee in CoffeeTypes)
+            {
+                coffeTypes += coffee + ", ";
+            }
+            return coffeTypes.Remove(coffeTypes.Length - 2);
         }
     }
 }

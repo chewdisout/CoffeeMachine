@@ -40,11 +40,34 @@ namespace TestProject1
             string moneyAreReturnedState = "Catch your cash";
 
             CoffeeMachine coffeeMachine = new CoffeeMachine();
-            Capuchino capuchino = new Capuchino();
             TestCustomer customer = new TestCustomer();
 
             coffeeMachine.InsertMoney(customer, 50);
             Assert.AreEqual(moneyAreReturnedState, coffeeMachine.ReturnBalance(customer), "Client is a thief");
+        }
+
+        [TestMethod]
+        public void TestMethod4()
+        {
+            CoffeeMachine coffeeMachine = new CoffeeMachine();
+            ChocolateCoffee chocolateCoffee = new ChocolateCoffee();
+            TestCustomer customer = new TestCustomer();
+
+            string noSyrupForCoffee = "There is no " + chocolateCoffee.Syrup + " syrup in stock";
+
+            Assert.AreEqual(noSyrupForCoffee, coffeeMachine.MakeCupCoffee(chocolateCoffee, customer), "Strange but we don't have such a syrup");
+        }
+
+        [TestMethod]
+        public void TestMethod5()
+        {
+            CoffeeMachine coffeeMachine = new CoffeeMachine();
+            ChocolateCoffee chocolateCoffee = new ChocolateCoffee();
+            Capuchino capuchino = new Capuchino();
+
+            string coffeeInStock = "We have: " + capuchino.CoffeeName + ", " + chocolateCoffee.CoffeeName;
+
+            Assert.AreEqual(coffeeInStock, coffeeMachine.GetCoffeeInStock(), "Check storage one more time!");
         }
     }
 }
