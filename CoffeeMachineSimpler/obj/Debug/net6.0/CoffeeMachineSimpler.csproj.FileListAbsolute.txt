@@ -1,0 +1,12 @@
+C:\Users\vladislavs.andrejevs\source\repos\CoffeeMachineSimpler\CoffeeMachineSimpler\obj\Debug\net6.0\CoffeeMachineSimpler.csproj.AssemblyReference.cache
+C:\Users\vladislavs.andrejevs\source\repos\CoffeeMachineSimpler\CoffeeMachineSimpler\obj\Debug\net6.0\CoffeeMachineSimpler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vladislavs.andrejevs\source\repos\CoffeeMachineSimpler\CoffeeMachineSimpler\obj\Debug\net6.0\CoffeeMachineSimpler.AssemblyInfoInputs.cache
+C:\Users\vladislavs.andrejevs\source\repos\CoffeeMachineSimpler\CoffeeMachineSimpler\obj\Debug\net6.0\CoffeeMachineSimpler.AssemblyInfo.cs
+C:\Users\vladislavs.andrejevs\source\repos\CoffeeMachineSimpler\CoffeeMachineSimpler\obj\Debug\net6.0\CoffeeMachineSimpler.csproj.CoreCompileInputs.cache
+C:\Users\vladislavs.andrejevs\source\repos\CoffeeMachineSimpler\CoffeeMachineSimpler\bin\Debug\net6.0\CoffeeMachineSimpler.deps.json
+C:\Users\vladislavs.andrejevs\source\repos\CoffeeMachineSimpler\CoffeeMachineSimpler\bin\Debug\net6.0\CoffeeMachineSimpler.dll
+C:\Users\vladislavs.andrejevs\source\repos\CoffeeMachineSimpler\CoffeeMachineSimpler\bin\Debug\net6.0\CoffeeMachineSimpler.pdb
+C:\Users\vladislavs.andrejevs\source\repos\CoffeeMachineSimpler\CoffeeMachineSimpler\obj\Debug\net6.0\CoffeeMachineSimpler.dll
+C:\Users\vladislavs.andrejevs\source\repos\CoffeeMachineSimpler\CoffeeMachineSimpler\obj\Debug\net6.0\refint\CoffeeMachineSimpler.dll
+C:\Users\vladislavs.andrejevs\source\repos\CoffeeMachineSimpler\CoffeeMachineSimpler\obj\Debug\net6.0\CoffeeMachineSimpler.pdb
+C:\Users\vladislavs.andrejevs\source\repos\CoffeeMachineSimpler\CoffeeMachineSimpler\obj\Debug\net6.0\ref\CoffeeMachineSimpler.dll
