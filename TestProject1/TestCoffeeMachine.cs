@@ -5,10 +5,10 @@ using CoffeeMachineSimpler.Clients;
 namespace TestProject1
 {
     [TestClass]
-    public class UnitTest1
+    public class TestCoffeeMachine
     {
         [TestMethod]
-        public void TestMethod1()
+        public void MakingOneCapuchinoAndCheckingCustomerMoneyAfter_ClientMoney25()
         {
             string succesfullyMadeCupOfCoffee = "Your Capuchino is ready";
             int customerMoney = 75;
@@ -22,7 +22,7 @@ namespace TestProject1
         }
 
         [TestMethod]
-        public void TestMethod2()
+        public void MakingCoffeeAndReturningMoneyForThat_MoneyAreReturned()
         {
             string moneyAreReturnedState = "Your money are back for the last coffee you made";
 
@@ -35,7 +35,7 @@ namespace TestProject1
         }
 
         [TestMethod]
-        public void TestMethod3()
+        public void Insert50EuroAndReturnThem_CatchYourCash()
         {
             string moneyAreReturnedState = "Catch your cash";
 
@@ -47,7 +47,19 @@ namespace TestProject1
         }
 
         [TestMethod]
-        public void TestMethod4()
+        public void InsertMinus50EuroAndReturnThem_YourBalanceIsLow()
+        {
+            string moneyAreReturnedState = "Your balance is too low";
+
+            CoffeeMachine coffeeMachine = new CoffeeMachine();
+            TestCustomer customer = new TestCustomer();
+
+            coffeeMachine.InsertMoney(customer, -50);
+            Assert.AreEqual(moneyAreReturnedState, coffeeMachine.ReturnBalance(customer), "Client is a thief");
+        }
+
+        [TestMethod]
+        public void MakeCoffeeWithNonExistingSyrup_NoSuchSyrup()
         {
             CoffeeMachine coffeeMachine = new CoffeeMachine();
             ChocolateCoffee chocolateCoffee = new ChocolateCoffee();
@@ -59,7 +71,7 @@ namespace TestProject1
         }
 
         [TestMethod]
-        public void TestMethod5()
+        public void ListProductsCoffeeMachineCanSell_ListAllProducts()
         {
             CoffeeMachine coffeeMachine = new CoffeeMachine();
             ChocolateCoffee chocolateCoffee = new ChocolateCoffee();
@@ -68,6 +80,31 @@ namespace TestProject1
             string coffeeInStock = "We have: " + capuchino.CoffeeName + ", " + chocolateCoffee.CoffeeName;
 
             Assert.AreEqual(coffeeInStock, coffeeMachine.GetCoffeeInStock(), "Check storage one more time!");
+        }
+
+        [TestMethod]
+        public void InsertDollarsInCoffeeMachine_False()
+        {
+            bool moneyAreInserted = false;
+
+            CoffeeMachine coffeeMachine = new CoffeeMachine();
+            TestCustomer customer = new TestCustomer();
+            customer.MoneyCurrency = "Dollar";
+
+            Assert.AreEqual(moneyAreInserted, coffeeMachine.InsertMoney(customer, 50), "Incorrect currency");
+        }
+
+        [TestMethod]
+        public void MakeCoffeeWithoutIngredients_NoMilkInTheCoffeeMachine()
+        {
+            string withoutMilkFailedCase = "No milk in the coffee machine";
+
+            CoffeeMachine coffeeMachine = new CoffeeMachine();
+            coffeeMachine.MilkAmount = 0;
+            TestCustomer customer = new TestCustomer();
+            Capuchino capuchino = new Capuchino();
+
+            Assert.AreEqual(withoutMilkFailedCase, coffeeMachine.MakeCupCoffee(capuchino, customer), "Incorrect currency");
         }
     }
 }

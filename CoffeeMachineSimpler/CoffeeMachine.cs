@@ -47,7 +47,7 @@ namespace CoffeeMachineSimpler
 
         public bool InsertMoney(IClient client, int insertMoney)
         {
-            if (client.MoneyCurrency == "Euro" && client.Money >= insertMoney)
+            if (client.MoneyCurrency == "Euro" && client.Money >= insertMoney && insertMoney > 0)
             {
                 this.Balance += insertMoney;
                 return true;
